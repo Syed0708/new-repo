@@ -56,7 +56,7 @@ for place in to_places:
         driver.find_element('xpath', "//text[text()='Indiranagar']").click()
 sleep(5)
 # In the date section book on a date which is 2 days after current date
-current_date = datetime(year=2023,month=12,day=31) + timedelta(days=2)
+current_date = datetime.now() + timedelta(days=2)
 formatted_date = current_date.strftime("%d")
 if formatted_date.startswith('0'):
     res = re.findall(r'[\d]$',formatted_date)
