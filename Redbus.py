@@ -43,10 +43,8 @@ driver.find_element('id', 'dest').send_keys('Bangalore')
 sleep(2)
 to_options = driver.find_elements('xpath', "//div[@class='sc-gZMcBi grvhsy']")
 to_list = [option.text for option in to_options]
-# print(to_list)
 to_places = []
 for item in to_list:
-    # print(item)
     if item.endswith('\nBangalore'):
         res = item[:-len('\nBangalore')]
         to_places.append(res)
